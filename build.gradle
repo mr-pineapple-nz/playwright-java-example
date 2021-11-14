@@ -9,7 +9,11 @@ repositories {
     mavenLocal()
     mavenCentral()
 }
-
+test {
+    useJUnitPlatform()
+}
 dependencies {
-
+    implementation("com.microsoft.playwright:playwright:1.16.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 }
